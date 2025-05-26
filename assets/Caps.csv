@@ -19,7 +19,7 @@ CapID,Name,CapType,Material,Shape,EdgeType,EdgeInscription,Colour,FrontDesign,Co
 18,Budweiser,Crown Cap,Metal,Circle,Crown,,Red,Crown,United States,Lager,,1,,
 19,Tennents,Crown Cap,Metal,Circle,Crown,,Gold & Red,T,Scotland,Lager,,1,,
 20,Perlenbacher,Screw Cap,Metal,Circle,Crown,,Gold & Black,Lion,Germany,Beer,,1,,
-21,Diam Bouchage,Cork,Cork Oak Tree,Circle,Smooth,,Brown,Mytik Diam,"Céret, Occitanie, France",Sparkling Wine,Sparkling,1,,
+21,Diam Bouchage,Cork,Cork Oak Tree,Circle,Smooth,,Brown,Mytik Diam,"Cï¿½ret, Occitanie,ï¿½France",Sparkling Wine,Sparkling,1,,
 22,Marks & Spencers,Screw Cap,Metal,Circle,Milled,,Black,M&S,"Leeds, England",Water,Still,1,,
 23,Karma Drinks - O&B,Screw Cap,Metal,Circle,Milled,,Orange & Blue,Karma Drinks,New Zealand,Soda,,1,,
 24,Karma Drinks - O&G,Screw Cap,Metal,Circle,Milled,,Orange & Green,Karma Drinks,New Zealand,Soda,,1,,
@@ -59,3 +59,4 @@ CapID,Name,CapType,Material,Shape,EdgeType,EdgeInscription,Colour,FrontDesign,Co
 58,Unknown 4 - Red JG,Screw Cap,Metal,Circle,Milled,,Red,JG,,Alcohol,,1,,
 59,Unknown 5 - Silver Barr,Crown Cap,Metal,Circle,Crown,,Silver,Barr,,Soda,,1,,
 60,Unknown 6 - Silver Sicilia,Crown Cap,Metal,Circle,Crown,,Silver,Bibite Sicilia,,Alcohol,,1,,
+61,Coca Cola - Plastic R&W, Screw Cap,Plastic,Circle,Milled,Red & White, Coca Cola,United States,Soda,,1,,
