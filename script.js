@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <img class="coinImage" src="assets/firstLoad.png" width="100" height="100" alt="coinImage">
             `;
             const img = card.querySelector(".coinImage");
-            loadCoinImages(coin.BackDesign).then((blob) => {
+            loadCoinImages(coin.ID).then((blob) => {
                 img.src = URL.createObjectURL(blob);
             });
             img.onerror = () => {
