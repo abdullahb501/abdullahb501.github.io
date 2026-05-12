@@ -50,14 +50,14 @@
     <img src="assets/DoctorLoginGIF.gif" width="20%" alt="DoctorLoginGIF"/>
 </div>
 
-
-<div class="JobSection">
+<div class="ProjectSection">
     <div>
         <h2>Summit Seeker</h2>
         <h3>Group | React Native, TypeScript, Expo Go | Jan. 2024 - Apr. 2024</h3>
         <p>During 3rd Year of University, my group was tasked with creating a mobile application for a target audience.
-        The project demanded use of Application Programming Interface calls, therefore, we chose tourists and frequent travelers due to access to Mobile Geographical data.
-        Key features for navigation and planning when travelling are shown below. </p>
+        The assignment demanded the use of Application Programming Interface calls, therefore, we chose tourists and frequent travelers.
+        As the module was studying the use of Mobile Geographical data, this was a factor in our decision for our target demographic.
+        The key features for navigation and planning when travelling are shown below. </p>
         <ul>
             <li>Calendar: Date scheduling</li>
             <li>Geograhical Sensor Data: Read and displayed in case of loss of direction.</li>
@@ -67,7 +67,11 @@
             <li>Notes: Journalling and lists.</li>
         </ul>
     </div>
-    <img src="assets/SummitSeeker.gif" width="30%" alt="SummitSeekerGIF"/>
+    <img id="SummitSeekerGIF" src="assets/SummitSeeker.gif" alt="SummitSeekerGIF" width="30%"
+    onclick="style.width = '70%'""
+    ondblclick="style.width = '30%'"
+    onmouseenter="alert('Click: Enlarge, Double Click: Enshrink')"
+    />
 
     <div>
         <h2>Chat Application</h2>
@@ -100,9 +104,13 @@
             <li>SQL CRUD Operations (Create, Read, Update, Delete)</li>
             <li>Shopping Basket: Multiple artworks can be purchased or removed from basket.</li>
         </ul>
-        <a href="https://devweb2023.cis.strath.ac.uk/~qrb21125/bzyfxwbjhjfbzge/">Demo</a>
+        <!-- <a href="https://devweb2023.cis.strath.ac.uk/~qrb21125/bzyfxwbjhjfbzge/">Demo</a> -->
     </div>
-    <img src="assets/ArtShop.jpg" alt="ArtShop" width="20%">
+    <img src="assets/ArtShopTop.png" alt="ArtShop" width="50%"
+    onclick="style.width = '90%'""
+    ondblclick="style.width = '50%'"
+    onmouseenter="alert('Click: Enlarge, Double Click: Enshrink')"
+    >
 
     <div>
         <h2>University Student Management System</h2>
@@ -130,7 +138,8 @@
     <img src="assets/firstLoad.png" alt="University of Strathclyde">
 </div>
 <h1>Personal Projects</h1>
-<div class="card">
+<div class="PersonalProjectSection"">
+    <div>
     <h2>Portfolio Website</h2>
     <h3>HTML, CSS, JavaScript | Jan. 2024 - Present</h3>
     <p>By displaying interesting projects and showcasing myself, I am able to practice my technical skills and create a history for future developement. </p>
@@ -141,7 +150,7 @@
         <li>Embedded Videos & Applied Knowledge</li>
     </ul>
 </div>
-<div class="card">
+<div>
     <h2>Digital Tabs</h2>
     <h3>HTML, CSS, JavaScript</h3>
     <p>Distinct colourful tabs that seperates multiple files inside a folder.
@@ -153,8 +162,7 @@
         <li>Books often have indexes at the front to find sections of text quickly </li>
     </ul>
 </div>
-
-<div class="card" style="clear: both;">
+<div>
     <h2>Simple Games</h2>
     <h3>HTML, CSS, JavaScript</h3>
     <p>To experiment with ASCII & GUI art using simple games for engagement. This can be followed up with images or keyboard interaction.</p>
@@ -163,7 +171,9 @@
         <li>Tic Tac Toe | WIP</li>
         <li>Hangman | WIP</li>
     </ul>
+
 </div>
-    <img src="assets/SimpleGameRPS.png" alt="Simple Game RPS" width="20%" height="20%" style="padding: 0 2rem 2rem 2rem; float: right;">
+    <img src="assets/SimpleGameRPS.png" alt="Simple Game RPS" width="50%" style="padding: 1em;">
+</div>
 </body>
 </html>

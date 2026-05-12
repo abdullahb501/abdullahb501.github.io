@@ -10,6 +10,8 @@
 //     })
 // })
 
+// document.getElementById('SummitSeekerGIF').style.width = 70%
+
 async function loadCaps() {
     try {
         const response = await fetch("assets/Caps.csv");

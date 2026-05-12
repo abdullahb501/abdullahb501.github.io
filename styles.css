@@ -82,16 +82,12 @@ nav a:last-child{
 
 .JobSection{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-.JobSection img{
-    margin: auto;
+    grid-template-columns: 80% 20%;
 }
 
 .JobSection div{
     display: flex;
-    padding: 3rem;
+    padding: 1em;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -99,6 +95,12 @@ nav a:last-child{
 
 .JobSection div ul{
     margin-top: .5rem;
+}
+
+.section{
+    padding: 1em;
+    margin: 1em;
+    align-items: center;
 }
 
 .Column1{
@@ -125,6 +127,23 @@ nav a:last-child{
     padding: 1em;
 }
 
+.EducationSection{
+    display: grid;
+    grid-template-columns: 80% 20%;
+}
+
+.EducationSection div{
+    display: flex;
+    padding: 1em;
+    flex-direction: column;
+}
+
+.EducationSection img{
+    display: flex;
+    align-self: center;
+    justify-self: center;
+}
+
 #TechGrid{
     /*display: grid;*/
     /*grid-template-columns: 1fr 1fr 1fr;*/
@@ -142,18 +161,48 @@ nav a:last-child{
     display: grid;
 }
 
-.EducationSection{
+.TechSection{
     text-align: center;
     text-decoration: none;
 }
 
-.EducationSection h2{
+.TechSection h2{
     text-align: center;
     text-decoration: underline;
 }
 
-.EducationSection ul li{
+.TechSection ul li{
     list-style: none;
+}
+
+.ProjectSection{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.ProjectSection div{
+    padding: 2em;
+}
+
+.ProjectSection img{
+    display: flex;
+    justify-self: center;
+    align-self: center;
+}
+
+.PersonalProjectSection{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.PersonalProjectSection div{
+    padding: 2em;
+}
+
+.PersonalProjectSection img{
+    display: flex;
+    justify-self: center;
+    align-self: center;
 }
 
 #ContactGrid{
