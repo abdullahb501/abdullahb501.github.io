@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
             let card = document.createElement("div");
             card.classList.add("CapCard");
             card.innerHTML = `
-                <img class="capImage" src="assets/firstLoad.png" width="100" height="100" alt="capImage">
+                <img class="capImage" src="assets/firstLoad.png" width="75" height="75" alt="capImage">
             `;
             const img = card.querySelector(".capImage");
             loadCapImages(cap.Name).then((blob) => {
@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
             let card = document.createElement("div");
             card.classList.add("CoinCard");
             card.innerHTML = `
-                <img class="coinImage" src="assets/firstLoad.png" width="100" height="100" alt="coinImage">
+                <img class="coinImage" src="assets/firstLoad.png" width="75" height="75" alt="coinImage">
             `;
             const img = card.querySelector(".coinImage");
             loadCoinImages(coin.ID).then((blob) => {
