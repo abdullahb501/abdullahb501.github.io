@@ -39,13 +39,13 @@ async function loadCapImages(search) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+    let capContainer = document.getElementById("CapGrid");
     loadCaps().then((caps) => {
-        let capContainer = document.getElementById("CapGrid");
         caps.forEach((cap) => {
             let card = document.createElement("div");
             card.classList.add("CapCard");
             card.innerHTML = `
-                <img class="capImage" src="assets/firstLoad.png" width="75" height="75" alt="capImage">
+                <img class="capImage" src="assets/images/firstLoad.png" width="75" height="75" alt="capImage">
             `;
             const img = card.querySelector(".capImage");
             loadCapImages(cap.Name).then((blob) => {
@@ -54,6 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
             img.onerror = () => {
                 card.style.display = "none";
             };
+
             capContainer.appendChild(card);
         });
     });
@@ -87,13 +88,14 @@ async function loadCoinImages(search) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+    let coinContainer = document.getElementById("CoinGrid");
+    console.log(coinContainer);
     loadCoins().then((coins) => {
-        let coinContainer = document.getElementById("CoinGrid");
         coins.forEach((coin) => {
             let card = document.createElement("div");
             card.classList.add("CoinCard");
             card.innerHTML = `
-                <img class="coinImage" src="assets/firstLoad.png" width="75" height="75" alt="coinImage">
+                <img class="coinImage" src="assets/images/firstLoad.png" width="75" height="75" alt="coinImage">
             `;
             const img = card.querySelector(".coinImage");
             loadCoinImages(coin.ID).then((blob) => {
@@ -102,6 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
             img.onerror = () => {
                 card.style.display = "none";
             };
+
             coinContainer.appendChild(card);
         });
     });

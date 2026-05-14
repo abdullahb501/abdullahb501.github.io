@@ -10,7 +10,7 @@
 <header>
     <nav>
         <a href="index.html">
-            <img id="logo" src="assets/logo.png" alt="Logo" width="50px" height="50px">
+            <img id="logo" src="assets/logos/logo.png" alt="Logo" width="50px" height="50px">
             <p>Home</p>
         </a>
         <a href="education.html">Education</a>
@@ -19,7 +19,7 @@
         <a href="coins.html">Coins</a>
         <a href="bottle-caps.html">Bottle Caps</a>
         <a href="https://www.linkedin.com/in/abdullah-butt-tm/">
-            <img src="assets/linkedin.png" alt="LinkedIn" width="50px" height="50px">
+            <img src="assets/logos/linkedin.png" alt="LinkedIn" width="50px" height="50px">
         </a>
     </nav>
 </header>
@@ -31,28 +31,41 @@
     <p>For my dissertation "Apps to manage multiple healthcare appointments and documents", I started with research into a demographic and focused on <a href="https://en.wikipedia.org/wiki/Chronic_condition">chronic patients</a>.
         This is due to the longevity and uncertain nature of chronic illnesses. For example, which condition they may have or what functions they retain. 
         Next, I researched precedent, current technologies, issues faced by patients, alongside industry and technological considerations.
-        Combined with Figma prototyping and the <a href="https://en.wikipedia.org/wiki/Software_development_process">SDLC</a>, I was able to refine the app as shown below with the following features.
+        Combined with Figma prototyping and the <a href="https://en.wikipedia.org/wiki/Software_development_process">SDLC</a>, 
+        I was able to refine the app as shown below with Role-Based Authentication (Patients, Doctors) and SQL CRUD Operations (Create, Read, Update, Delete).
     </p>
-    <ul>
+    <!-- <ul>
         <li>Role-Based Authentication (Patients, Doctors) </li>
         <li>SQL CRUD Operations (Create, Read, Update, Delete)</li>
-    </ul>
-    <h3>Appointments</h3>
-    <ul>
-        <li>Calendar, Map, Contacts</li>
-    </ul>
-    <h3>Documents</h3>
-    <ul>
-        <li>Upload/Delete Media</li>
-        <li>Online Searching for Symptoms/Medication</li>
-        <li>Symptom Upload for Doctors</li>
-    </ul>
+    </ul> -->
+    <div style="display: grid; grid-template-columns: 50% 50%;">
+        <div style="display: flex;
+                    padding: 1em;
+                    flex-direction: column;">
+            <h3>Appointments</h3>
+            <ul>
+                <li>Calendar: Event planning</li>
+                <li>Map: Routing</li>
+                <li>Contacts: Instant Communication</li>
+            </ul>
+        </div>
+        <div style="display: flex;
+                    padding: 1em;
+                    flex-direction: column;">
+            <h3>Documents</h3>
+            <ul>
+                <li>Upload/Delete Media</li>
+                <li>Online Searching for Symptoms/Medication</li>
+                <li>Symptom Upload for Doctors</li>
+            </ul>
+        </div>
+    </div>
 </div>
 <div style="display: flex; justify-content: space-evenly; margin-bottom: 1rem">
-    <img src="assets/LoginGIF.gif" width="20%" alt="LoginGIF"/>
-    <img src="assets/FeaturesGIF.gif" width="20%" alt="FeaturesGIF"/>
-    <img src="assets/SignUpGIF.gif" width="20%" alt="SignUpGIF"/>
-    <img src="assets/DoctorLoginGIF.gif" width="20%" alt="DoctorLoginGIF"/>
+    <img src="assets/videos/LoginGIF.gif" width="20%" alt="LoginGIF"/>
+    <img src="assets/videos/FeaturesGIF.gif" width="20%" alt="FeaturesGIF"/>
+    <img src="assets/videos/SignUpGIF.gif" width="20%" alt="SignUpGIF"/>
+    <img src="assets/videos/DoctorLoginGIF.gif" width="20%" alt="DoctorLoginGIF"/>
 </div>
 
 <div class="ProjectSection">
@@ -72,7 +85,7 @@
             <li>Notes: Journalling and lists.</li>
         </ul>
     </div>
-    <img id="SummitSeekerGIF" src="assets/SummitSeeker.gif" alt="SummitSeekerGIF" width="50%"
+    <img id="SummitSeekerGIF" src="assets/videos/SummitSeeker.gif" alt="SummitSeekerGIF" width="50%"
     onclick="style.width = '70%'"
     ondblclick="style.width = '50%'"
     />
@@ -94,7 +107,7 @@
             <li>(Attempted) Video Calls: No video/audio feedback.</li>
         </ul>
     </div>
-    <img src="assets/firstLoad.png" alt="University of Strathclyde">
+    <img src="assets/videos/ChatGIF.gif" width="90%" alt="ChatGIF"/>
 
     <div>
         <h2>Art Shop</h2>
@@ -110,10 +123,7 @@
         </ul>
         <!-- <a href="https://devweb2023.cis.strath.ac.uk/~qrb21125/bzyfxwbjhjfbzge/">Demo</a> -->
     </div>
-    <img src="assets/ArtShopTop.png" alt="ArtShop" width="90%"
-    onclick="style.width = '90%'"
-    ondblclick="style.width = '90%'"
-    >
+    <img src="assets/images/projects/ArtShopTop.png" alt="ArtShop" width="90%">
 
     <div>
         <h2>University Student Management System</h2>
@@ -126,7 +136,7 @@
             <li>SQL CRUD Operations (Create, Read, Update, Delete)</li>
         </ul>
     </div>
-    <img src="assets/UsmsERD.png" alt="Usms Entity Relationship Diagram" width="90%">
+    <img src="assets/images/projects/UsmsERD.png" alt="Usms Entity Relationship Diagram" width="90%">
 
     <div>
         <h2>Cryptograms</h2>
@@ -148,7 +158,7 @@
     </div>
     <div style="display: flex; justify-content: center; align-items: center;">
         <video width="100%" muted autoplay loop>
-        <source src="assets/CryptoGIF.mp4" type="video/mp4" alt="Cryptograms">
+        <source src="assets/videos/CryptoGIF.mp4" type="video/mp4" alt="Cryptograms">
         Your browser does not support the video tag.
     </video>
     </div>
@@ -169,7 +179,7 @@
         </div>
         <div style="display: flex; justify-content: center; align-items: center;">
             <video width="100%" muted autoplay loop>
-            <source src="assets/SimpleShellGIF.mp4" type="video/mp4" alt="Simple Shell">
+            <source src="assets/videos/SimpleShellGIF.mp4" type="video/mp4" alt="Simple Shell">
             Your browser does not support the video tag.
         </video>
         </div>
@@ -211,7 +221,7 @@
     </ul>
 
 </div>
-    <img src="assets/SimpleGameRPS.png" alt="Simple Game RPS" width="50%" style="padding: 1em;">
+    <img src="assets/images/projects/SimpleGameRPS.png" alt="Simple Game RPS" width="50%" style="padding: 1em;">
 </div>
 </body>
 </html>
