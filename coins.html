@@ -2,49 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js" defer></script>
+    <script src="script.js" defer></script>
     <title>Coins</title>
 </head>
-<header>
-    <nav>
-        <a href="index.html">
-            <img id="logo" src="assets/logos/logo.png" alt="Logo" width="50px" height="50px">
-            <p>Home</p>
-        </a>
-        <a href="education.html">Education</a>
-        <a href="jobs.html">Work Experience</a>
-        <a href="projects.html">Projects</a>
-        <a href="coins.html">Coins</a>
-        <a href="bottle-caps.html">Bottle Caps</a>
-        <a href="https://www.linkedin.com/in/abdullah-butt-tm/">
-            <img src="assets/logos/linkedin.png" alt="LinkedIn" width="50px" height="50px">
-        </a>
-    </nav>
-</header>
 <body>
-    <h1 class="CollectionTitle">Coin Collection</h1>
-    <div id="CoinGrid"></div>
-    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
-    <script src="script.js"></script>
+    <header>
+        <nav id = "navbar"></nav>
+    </header>
+
+    <main>
+        <h1 class="CollectionTitle">Coin Collection</h1>
+        <div id="CoinGrid"></div>  
+    </main>
+
+   <footer class="ContactGrid">
+    <a class="HeroButton" href="https://www.royalmint.com/discover/uk-coins/coin-design-and-specifications/fifty-pence-coin/" target="_blank" rel="noopener noreferrer" aria-label="Visit The Royal Mint Website" title="Click to visit the Royal Mint website">
+        <img src="assets/logos/oldRoyalMint.png" alt="The Royal Mint Logo" width="50" height="50">
+    </a>
+    <a class="HeroButton" href="https://en.numista.com/catalogue/index.php?cat=y&st=147" target="_blank" rel="noopener noreferrer" aria-label="Visit The Numista Website" title="Click to visit the Numista website">
+        <img src="assets/logos/oldNumista.png" alt="Numista Logo" width="50" height="50">
+    </a>
+    <a class="HeroButton" href="https://www.google.com/imghp" target="_blank" rel="noopener noreferrer" aria-label="Visit Google Images" title="Click to visit Google Images">
+        <img src="assets/logos/oldGoogle.png" alt="Google Logo" width="50" height="50">
+    </a>
+</footer> 
 </body>
-<footer class="footer" style="padding: 1em 0 2em 0;">
-    <button style="border-radius: 100%; padding: 1em;">
-        <a href="https://www.royalmint.com/discover/uk-coins/coin-design-and-specifications/fifty-pence-coin/">
-            <img src="assets/logos/oldRoyalMint.png" alt="The Royal Mint Logo" width="50" height="50">
-            <br>
-        </a>
-    </button>
-    <button style="border-radius: 100%; padding: 1em;">
-        <a href="https://en.numista.com/catalogue/index.php?cat=y&st=147">
-            <img src="assets/logos/oldNumista.png" alt="Numista Logo" width="50" height="50">
-            <br>
-        </a>
-    </button>
-    <button style="border-radius: 100%; padding: 1em;">
-        <a href="https://www.google.com/imghp">
-            <img src="assets/logos/oldGoogle.png" alt="Google Logo" width="50" height="50">
-            <br>
-        </a>
-    </button>
-</footer>
 </html>

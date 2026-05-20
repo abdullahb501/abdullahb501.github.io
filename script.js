@@ -12,6 +12,14 @@
 
 // document.getElementById('SummitSeekerGIF').style.width = 70%
 
+document.addEventListener("DOMContentLoaded", () => {
+    fetch('header.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('navbar').innerHTML = html;
+        });
+})
+
 async function loadCaps() {
     try {
         const response = await fetch("assets/Caps.csv");
@@ -45,11 +53,15 @@ document.addEventListener("DOMContentLoaded", () => {
             let card = document.createElement("div");
             card.classList.add("CapCard");
             card.innerHTML = `
-                <img class="capImage" src="assets/images/firstLoad.png" width="75" height="75" alt="capImage">
+                <img loading="lazy" class="capImage" src="assets/images/firstLoad.png" width="75" height="75" alt="capImage">
             `;
             const img = card.querySelector(".capImage");
             loadCapImages(cap.Name).then((blob) => {
                 img.src = URL.createObjectURL(blob);
+                card.title = "Name: " + cap.Name + "\n" +
+                "Country of Origin: " + cap["Country of Origin"] + "\n" + 
+                "Beverage Type: " + cap["Beverage Type"] + "\n" + 
+                "Quantity: " + cap.Quantity
             });
             img.onerror = () => {
                 card.style.display = "none";
@@ -95,11 +107,14 @@ document.addEventListener("DOMContentLoaded", () => {
             let card = document.createElement("div");
             card.classList.add("CoinCard");
             card.innerHTML = `
-                <img class="coinImage" src="assets/images/firstLoad.png" width="75" height="75" alt="coinImage">
+                <img loading="lazy" class="coinImage" src="assets/images/firstLoad.png" width="75" height="75" alt="coinImage">
             `;
             const img = card.querySelector(".coinImage");
             loadCoinImages(coin.ID).then((blob) => {
                 img.src = URL.createObjectURL(blob);
+                card.title = "Name: " + coin.ID + "\n" + 
+                "Year: " + coin.Year + "\n" +
+                "Quantity: " + coin.Quantity
             });
             img.onerror = () => {
                 card.style.display = "none";

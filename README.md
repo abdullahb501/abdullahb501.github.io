@@ -12,16 +12,17 @@ Responsive Personal Portfolio Website.
 
 Screens/Tabs:
 - Home
-- About
+- Education
+- Work Experience
+- Projects
 - Collections
   - Coins
-  - Bottle-caps
-- Work Experience
+  - Bottle Caps
 
 ## Visuals
-<img src="assets/oldLogo.png" width="20%" alt="Logo"/>
-<img src="assets/github.png" width="20%" alt="GitHub"/>
-<img src="assets/linkedin.png" width="20%" alt="LinkedIn"/>
+<img src="assets/logos/oldLogo.png" width="20%" alt="Logo"/>
+<img src="assets/logos/github.png" width="20%" alt="GitHub"/>
+<img src="assets/logos/linkedin.png" width="20%" alt="LinkedIn"/>
 
 ## Installation
 - To Be Added
@@ -33,7 +34,7 @@ Screens/Tabs:
 - To Be Added
 
 ## Authors & Acknowledgment
-Author: Abdullah 
+Author: Abdullah
 
 
 

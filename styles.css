@@ -42,93 +42,52 @@ nav a:first-child{
 }
 
 nav a:last-child{
-    background-color: royalblue;
-    color: ghostwhite;
+    background-color: rgb(0, 112, 192);
 }
 
 #HeroSection{
-    /*background-image: url(assets/github.png);*/
-    /*background-size: cover;*/
-    /*background-position: center;*/
-    /*background-repeat: no-repeat;*/
-    /*background-color: #7ad3e1;*/
+    /* background-image: url(assets/logos/github.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #7ad3e1;  */
     height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-family: "Segoe UI", monospace;
-    color: royalblue;
 }
 
-#HeroButton{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 5vh;
-    width: 10vh;
-    padding: 2em;
-    border: .1em solid black;
-    border-radius: 20%;
-    background-color: royalblue;
-    color: ghostwhite;
-}
-
-.card{
-    margin: 3rem;
-    float: left;
-}
-
-.JobSection{
-    display: grid;
-    grid-template-columns: 80% 20%;
-}
-
-.JobSection div{
-    display: flex;
-    padding: 1em;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.JobSection div ul{
-    margin-top: .5rem;
-}
-
-.section{
-    padding: 1em;
-    margin: 1em;
-    align-items: center;
-}
-
-.Column1{
+.ContactGrid{
     display: flex;
     justify-content: space-evenly;
-    align-items: stretch;
+    padding-bottom: 1em;
+}
+
+.HeroButton{
+    border: .1em solid black;
+    border-radius: 100%;
     padding: 1em;
-    margin: 1em;
+    color: #000;
 }
 
-.Column2{
+.CollectionTitle{
     display: flex;
-    align-items: stretch;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
 }
 
-#CoinGrid, #CapGrid{
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.CoinCard, .CapCard {
-    padding: 1em;
+h1{
+    text-align: center;
+    text-decoration: underline;
 }
 
 .EducationSection{
     display: grid;
     grid-template-columns: 80% 20%;
+    padding-left: 2em;
 }
 
 .EducationSection div{
@@ -174,6 +133,23 @@ nav a:last-child{
     list-style: none;
 }
 
+.JobSection{
+    display: grid;
+    grid-template-columns: 80% 20%;
+}
+
+.JobSection div{
+    display: flex;
+    padding: 1em;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.JobSection div ul{
+    margin-top: .5rem;
+}
+
 .ProjectSection{
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -204,55 +180,13 @@ nav a:last-child{
     align-self: center;
 }
 
-#ContactGrid{
+#CoinGrid, #CapGrid{
     display: flex;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
-.ContactCard{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 3em;
-    margin: .5em;
-    background-color: #47BCFF;
-    border-radius: 10%;
-    border: .01em solid black;
-    text-decoration: none;
-    color: black;
-    height: 20vh;
-}
-
-.ContactCard b{
-    padding: 1em 0 1em 0;
-}
-
-h1{
-    text-align: center;
-    text-decoration: underline;
-}
-
-.CollectionTitle{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 15vh;
-}
-
-
-.footer{
-    height: 10vh;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    text-align: center;
-}
-
-.footer button, #ContactGrid button{
-    border-radius: 100%; 
+.CoinCard, .CapCard {
     padding: 1em;
-    background-color: transparent;
 }
 
 /*img{*/
