@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js" defer></script>
-    <script src="script.js" defer></script>
+<script src="script.js" defer></script>
     <title>Coins</title>
 </head>
 <body>
@@ -15,7 +15,75 @@
 
     <main>
         <h1 class="CollectionTitle">Coin Collection</h1>
-        <div id="CoinGrid"></div>  
+        <label for="coinSearch">
+            <input class="CoinSearch" type="text" id="coinSearch" name="coinSearch" alt="coinSearch" placeholder="Enter Coin Information (10 Japanese Yen)">
+        </label>
+        <div id="TotalContainer"></div>
+
+        <div id="CoinInfoContainer">
+            <div class="CoinInfoSection">
+                <h3 class="CoinInfoTitle">Denomination</h3>
+                <a href="#">1</a>
+                <a href="#">2</a>
+                <a href="#">5</a>
+                <a href="#">10</a>
+                <a href="#">20</a>
+                <a href="#">50</a>
+            </div>
+            <div class="CoinInfoSection">
+                <h3 class="CoinInfoTitle">Currency</h3>
+                <a href="#">Pence</a>
+                <a href="#">Pound</a>
+                <a href="#">Euro</a>
+                <a href="#">Euro Cent</a>
+                <a href="#">Fils</a>
+                <a href="#">Dirhams</a>
+                <a href="#">Dimes</a>
+                <a href="#">New Sheqalim</a>
+                <a href="#">Pakistani Rupee</a>
+                <a href="#">Krone</a>
+                <a href="#">Riyals</a>
+                <a href="#">Halalas</a>
+                <a href="#">New Pesos</a>
+                <a href="#">Swiss Francs</a>
+                <a href="#">Yen</a>
+                <a href="#">Romanian Leu</a>
+                <a href="#">Zloty</a>
+                <a href="#">Thai Baht</a>
+                </p>
+            </div>
+            <div class="CoinInfoSection">
+                <h3 class="CoinInfoTitle">Country</h3>
+                <a href="#">UK</a>
+                <a href="#">Germany</a>
+                <a href="#">Italy</a>
+                <a href="#">Spain</a>
+                <a href="#">Qatar</a>
+                <a href="#">USA</a>
+                <a href="#">Israel</a>
+                <a href="#">Pakistan</a>
+                <a href="#">Norway</a>
+                <a href="#">Saudi Arabia</a>
+                <a href="#">Morocco</a>
+                <a href="#">Mexico</a>
+                <a href="#">Switzerland</a>
+                <a href="#">Japan</a>
+                <a href="#">Romania</a>
+                <a href="#">Poland</a>
+                <a href="#">Thailand</a>
+            </div>
+        </div>
+
+        <div id="CoinSearchDisplay"></div>
+        <p id="CoinSearchDisplaySeperation" style="display: none;">===========================================================================================================================================</p>
+        
+        <!-- TODO: 1 Searchbar - Combined Search
+        TODO: List Options
+        TODO: Show Total Coin Value (eg. £500)
+        TODO: Graphs & charts showehow -->
+
+
+        <div id="CoinGrid" style="clear: both;"></div>  
     </main>
 
    <footer class="ContactGrid">

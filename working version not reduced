@@ -1,0 +1,302 @@
+
+document.addEventListener("DOMContentLoaded", () => {
+    // Get NavBar for all pages
+    fetch('header.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('navbar').innerHTML = html;
+        });
+
+     // Check for text and display appropriate info
+    let coinSearch = document.getElementById("coinSearch");
+    coinSearch.addEventListener("keyup", () => {
+        displayCoinSearch("CoinSearchDisplay", coinSearch.value)
+    });
+    let capSearch = document.getElementById("capSearch");
+    capSearch.addEventListener("keyup", () => {
+        displayCapSearch("CapSearchDisplay", capSearch.value)
+    });
+
+})
+
+async function loadItems(csvFile){
+    try {
+        const response = await fetch("assets/" + csvFile);
+        const text = await response.text();
+
+        const result = Papa.parse(text, {
+            header: true,
+            skipEmptyLines: true,
+        });
+
+        return result.data;
+    } catch (err) {
+        console.error("Error loading Coins:", err);
+    }
+}
+
+async function loadCoins() {
+    try {
+        const response = await fetch("assets/Coins.csv");
+        const text = await response.text();
+
+        const result = Papa.parse(text, {
+            header: true,
+            skipEmptyLines: true,
+        });
+
+        return result.data;
+    } catch (err) {
+        console.error("Error loading Coins:", err);
+    }
+}
+
+async function loadCaps() {
+    try {
+        const response = await fetch("assets/Caps.csv");
+        const text = await response.text();
+
+        const result = Papa.parse(text, {
+            header: true,
+            skipEmptyLines: true,
+        });
+
+        return result.data;
+    } catch (err) {
+        console.error("Error loading Caps:", err);
+    }
+}
+
+async function loadCoinImages(search) {
+    search = search.concat(".png");
+    try {
+        const response = await fetch(`assets/coinImages/${search}`);
+        return await response.blob();
+    } catch (err) {
+        console.error("Error loading Coins:", err);
+    }
+}
+
+async function loadCapImages(search) {
+    search = search.concat(".png");
+    try {
+        const response = await fetch(`assets/capImages/${search}`);
+        return response.blob();
+    } catch (err) {
+        console.error("Error loading Caps:", err);
+    }
+}
+
+async function createCard(cardName, cardImage, dotCardImage){
+    let card = document.createElement("div");
+    card.classList.add(cardName);
+    card.innerHTML = `
+        <img loading="lazy" class=${cardImage} src="assets/images/firstLoad.png" width="75" height="75" alt=${cardImage}>
+    `;
+    const img = card.querySelector(dotCardImage);
+    loadCapImages(cap.Name).then((blob) => {
+        img.src = URL.createObjectURL(blob);
+        card.title = "Name: " + cap.Name + "\n" +
+        "Country of Origin: " + cap.CountryOrigin + "\n" + 
+        "Beverage Type: " + cap.BeverageType + "\n" + 
+        "Quantity: " + cap.Quantity
+    });
+    img.onerror = () => {
+        card.style.display = "none";
+    };
+}
+
+function capCardTitle(){
+    return card.title = "Name: " + cap.Name + "\n" +
+        "Country of Origin: " + cap.CountryOrigin + "\n" + 
+        "Beverage Type: " + cap.BeverageType + "\n" + 
+        "Quantity: " + cap.Quantity
+}
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    let capContainer = document.getElementById("CapGrid");
+    loadCaps().then((caps) => {
+        caps.forEach((cap) => {
+            let card = document.createElement("div");
+            card.classList.add("CapCard");
+            card.innerHTML = `
+                <img loading="lazy" class="capImage" src="assets/images/firstLoad.png" width="75" height="75" alt="capImage">
+            `;
+            const img = card.querySelector(".capImage");
+            loadCapImages(cap.Name).then((blob) => {
+                img.src = URL.createObjectURL(blob);
+                card.title = "Name: " + cap.Name + "\n" +
+                "Country of Origin: " + cap.CountryOrigin + "\n" + 
+                "Beverage Type: " + cap.BeverageType + "\n" + 
+                "Quantity: " + cap.Quantity
+            });
+            img.onerror = () => {
+                card.style.display = "none";
+            };
+
+            capContainer.appendChild(card);
+        });
+    });
+})
+
+
+async function loadCoins() {
+    try {
+        const response = await fetch("assets/Coins.csv");
+        const text = await response.text();
+
+        const result = Papa.parse(text, {
+            header: true,
+            skipEmptyLines: true,
+        });
+
+        return result.data;
+    } catch (err) {
+        console.error("Error loading Coins:", err);
+    }
+}
+
+async function loadCoinImages(search) {
+    search = search.concat(".png");
+    try {
+        const response = await fetch(`assets/coinImages/${search}`);
+        return await response.blob();
+    } catch (err) {
+        console.error("Error loading Coins:", err);
+    }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    let coinContainer = document.getElementById("CoinGrid");
+    loadCoins().then((coins) => {
+        coins.forEach((coin) => {
+            let card = document.createElement("div");
+            card.classList.add("CoinCard");
+            card.innerHTML = `
+                <img loading="lazy" class="coinImage" src="assets/images/firstLoad.png" width="75" height="75" alt="coinImage">
+            `;
+            const img = card.querySelector(".coinImage");
+            loadCoinImages(coin.ID).then((blob) => {
+                img.src = URL.createObjectURL(blob);
+                card.title = "Name: " + coin.ID + "\n" + 
+                "Year: " + coin.Year + "\n" +
+                "Quantity: " + coin.Quantity
+            });
+            img.onerror = () => {
+                card.style.display = "none";
+            };
+
+            coinContainer.appendChild(card);
+        });
+    });
+})
+
+async function displayCoinSearch(container, search){
+let coinContainer = document.getElementById(container);
+coinContainer.innerHTML = "";
+let found = false;
+    loadCoins().then((coins) => {
+        coins.forEach((coin) => {
+            const match =
+            Object.values(coin).some(value =>
+                value?.toString().toLowerCase().includes(search.toLowerCase())
+            );
+            if(!match) return;
+            found = true;
+            let card = document.createElement("div");
+            card.innerHTML = `
+                <img loading="lazy" class="coinImage" src="assets/images/firstLoad.png" width="75" height="75" alt="coinImage">
+            `;
+            const img = card.querySelector(".coinImage");
+            loadCoinImages(coin.ID).then((blob) => {
+                img.src = URL.createObjectURL(blob);
+                card.title = "Name: " + coin.ID + "\n" + 
+                "Year: " + coin.Year + "\n" +
+                "Quantity: " + coin.Quantity
+                card.style.padding="1em";
+            });
+            img.onerror = () => {
+                card.style.display = "none";
+            };
+            coinContainer.appendChild(card);
+        });
+        document.getElementById("CoinSearchDisplaySeperation").style.display =
+        found ? "block" : "none";
+    });
+}
+
+async function displayCapSearch(container, search){
+let capContainer = document.getElementById(container);
+capContainer.innerHTML = "";
+let found = false;
+    loadCaps().then((caps) => {
+        caps.forEach((cap) => {
+            const match = Object.values(cap).some(value =>
+                value?.toString().toLowerCase().includes(search.toLowerCase())
+            );
+            if(!match) return;
+            found = true;
+            let card = document.createElement("div");
+            card.innerHTML = `
+                <img loading="lazy" class="capImage" src="assets/images/firstLoad.png" width="75" height="75" alt="capImage">
+            `;
+            const img = card.querySelector(".capImage");
+            loadCapImages(cap.Name).then((blob) => {
+                img.src = URL.createObjectURL(blob);
+                card.title = "Name: " + cap.Name + "\n" +
+                "Country of Origin: " + cap.CountryOrigin + "\n" + 
+                "Beverage Type: " + cap.BeverageType + "\n" + 
+                "Quantity: " + cap.Quantity
+            });
+            img.onerror = () => {
+                card.style.display = "none";
+            };
+            capContainer.appendChild(card);
+
+        });
+        document.getElementById("CapSearchDisplaySeperation").style.display =
+        found ? "block" : "none";
+    });
+}
+
+// Get Estimated Total Value
+document.addEventListener("DOMContentLoaded", () => {
+    loadCoins().then((coins) => {
+        let penceCounter = 0;
+        let poundsCounter = 0;
+        let eurosCounter = 0;
+        let euroCentsCounter = 0;
+        coins.forEach((coin) => {
+            let value = Number(coin.Denomination) * Number(coin.Quantity);
+            switch (coin.Currency) {
+                case "Pence":
+                    penceCounter += value;
+                    break;
+                case "Pound":
+                    poundsCounter += value;
+                    break;
+                case "Euro Cent":
+                    euroCentsCounter += value;
+                    break;
+                case "Euro":
+                    eurosCounter += value;
+                    break;
+                default:
+                    break;
+            }
+        });
+        let totalPounds = poundsCounter + penceCounter / 100;
+        let totalEuros = eurosCounter + euroCentsCounter / 100;
+        let total = totalPounds + (totalEuros * 0.87);
+        document.getElementById("TotalContainer").innerHTML =
+        `<p style="margin-left: 2em; border: .5em dash #000">Estimated Total Value : £${total.toFixed(2)} GBP</p>`;
+    });
+})
+
+
+
+
+

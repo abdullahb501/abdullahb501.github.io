@@ -1,4 +1,4 @@
-Name,Cap Type,Material,Shape,EdgeType,Colour,Design,Country of Origin,Beverage Type,Quantity,Notes
+Name,CapType,Material,Shape,EdgeType,Colour,Design,CountryOrigin,BeverageType,Quantity,Notes
 Arla Cravendale,Screw Cap,Plastic,Circle,Milled,Green,Arla,Denmark,Milk,1,
 Strathmore Still,Screw Cap,Metal,Circle,Milled,Blue,Strathmore Still,"Alberta, Canada",Still Water,2,
 Harrogate,Screw Cap,Metal,Circle,Milled,Black,Harrogate Spring Water,"North Yorkshire, England",Still Water,1,
@@ -26,7 +26,7 @@ Madri,Screw Cap,Metal,Circle,Crown,Black & White,Madri,Britain,Lager,1,
 Allini,Cork with muselet (wire cage),Cork & Metal,Circle,Smooth,Black,Allini,"Veneto, Italy",Prosecco,1,
 Malibu,Screw Cap,Metal,Circle,Milled,Black & Yellow,Malibu,Canada,Rum,1,
 Captain Morgan,Screw Cap,Metal,Circle,Milled,Gold,Captain Morgan Rum Company,United States Virgin Islands,Rum,1,
-Diam Bouchage,Cork,Cork Oak Tree,Circle,Smooth,Brown,Mytik Diam,"Céret, Occitanie, France",Sparkling Wine,1,
+Diam Bouchage,Cork,Cork Oak Tree,Circle,Smooth,Brown,Mytik Diam,"Cï¿½ret, Occitanie,ï¿½France",Sparkling Wine,1,
 Barbican,Crown Cap,Metal,Circle,Crown,Blue & Silver,Barbican,Dubai,Soda,1,
 Pepsi Max - Plastic,Screw Cap,Plastic,Circle,Milled,Black,Open By Hand,United States,Soda,1,
 Diet Coke - Plastic PRM,Screw Cap,Plastic,Circle,Milled,Silver,Please Recycle Me,United States,Soda,1,

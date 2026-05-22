@@ -53,8 +53,6 @@ function searchTable() {
     }
 }
 
-
-
 function handleCoinForm(e) {
     e.preventDefault();
     let coinDenomination = document.getElementById("coinDenomination").value;
