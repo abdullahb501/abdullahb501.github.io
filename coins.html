@@ -14,25 +14,27 @@
     </header>
 
     <main>
-        <h1 class="CollectionTitle">Coin Collection</h1>
-        <label for="coinSearch">
-            <input class="CoinSearch" type="text" id="coinSearch" name="coinSearch" alt="coinSearch" placeholder="Enter Coin Information (10 Japanese Yen)">
-        </label>
-        <div id="TotalContainer"></div>
+        <div class="CollectionTitle">
+            <h1>Coin Collection</h1>
+            <div id="TotalContainer"></div>
+            <label for="coinSearch">
+                <input class="CoinSearch" type="text" id="coinSearch" name="coinSearch" alt="coinSearch" placeholder="Enter Coin Information (10 Japanese Yen)">
+            </label>
+        </div>
 
         <div id="CoinInfoContainer">
-            <div class="CoinInfoSection">
+            <div class="CoinInfoSection" id="coinDenomination">
                 <h3 class="CoinInfoTitle">Denomination</h3>
-                <a href="#">1</a>
+                <!-- <a href="#">1</a>
                 <a href="#">2</a>
                 <a href="#">5</a>
                 <a href="#">10</a>
                 <a href="#">20</a>
-                <a href="#">50</a>
+                <a href="#">50</a> -->
             </div>
-            <div class="CoinInfoSection">
+            <div class="CoinInfoSection" id="coinCurrency">
                 <h3 class="CoinInfoTitle">Currency</h3>
-                <a href="#">Pence</a>
+                <!-- <a href="#">Pence</a>
                 <a href="#">Pound</a>
                 <a href="#">Euro</a>
                 <a href="#">Euro Cent</a>
@@ -49,12 +51,11 @@
                 <a href="#">Yen</a>
                 <a href="#">Romanian Leu</a>
                 <a href="#">Zloty</a>
-                <a href="#">Thai Baht</a>
-                </p>
+                <a href="#">Thai Baht</a> -->
             </div>
-            <div class="CoinInfoSection">
+            <div class="CoinInfoSection" id="coinCountry">
                 <h3 class="CoinInfoTitle">Country</h3>
-                <a href="#">UK</a>
+                <!-- <a href="#">UK</a>
                 <a href="#">Germany</a>
                 <a href="#">Italy</a>
                 <a href="#">Spain</a>
@@ -70,17 +71,14 @@
                 <a href="#">Japan</a>
                 <a href="#">Romania</a>
                 <a href="#">Poland</a>
-                <a href="#">Thailand</a>
+                <a href="#">Thailand</a> -->
             </div>
         </div>
 
         <div id="CoinSearchDisplay"></div>
         <p id="CoinSearchDisplaySeperation" style="display: none;">===========================================================================================================================================</p>
         
-        <!-- TODO: 1 Searchbar - Combined Search
-        TODO: List Options
-        TODO: Show Total Coin Value (eg. £500)
-        TODO: Graphs & charts showehow -->
+        <!-- TODO: Graphs & charts somehow -->
 
 
         <div id="CoinGrid" style="clear: both;"></div>  

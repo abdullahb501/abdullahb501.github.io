@@ -72,9 +72,16 @@ nav a:last-child{
     color: #000;
 }
 
-.CollectionTitle{
+.PageTitle{
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: 15vh;
+}
+
+.CollectionTitle{
+    display: flex;
+    justify-content: space-around;
     align-items: center;
     height: 15vh;
 }
@@ -103,8 +110,6 @@ h1{
 }
 
 #TechGrid{
-    /*display: grid;*/
-    /*grid-template-columns: 1fr 1fr 1fr;*/
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -190,11 +195,16 @@ h1{
 }
 
 .CoinSearch{
-    /* border-radius: 25%; */
     border: .1em #000;
     padding: 1em;
     margin: 1em;
-    min-width: 30%;
+    min-width: 30vw;
+}
+
+#TotalContainer{
+    margin:1em; 
+    padding:1em; 
+    border:.1em solid #000;
 }
 
 .CoinInfoTitle, .CapInfoTitle{
@@ -205,6 +215,8 @@ h1{
 .CoinInfoSection a, .CapInfoSection a{
     color: #000;
     text-decoration: none;
+    /* margin-left: 2em; */
+    display: inline-block;
     margin-left: 2em;
 }
 
@@ -228,7 +240,7 @@ h1{
 }
 
 .InfoTitle:hover .InfoSection{
-    display: inline;
+    display: block;
 }
 
 .InfoSection a{

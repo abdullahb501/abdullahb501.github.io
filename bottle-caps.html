@@ -14,10 +14,13 @@
     </header>
 
     <main>
-        <h1 class="CollectionTitle">Bottle Cap Collection</h1>
-        <label for="capSearch">
-            <input class="CoinSearch" type="text" id="capSearch" name="capSearch" alt="capSearch" placeholder="Enter Cap Information (Arla Cravendale, Plastic, Soda)">
-        </label>
+        <div class="CollectionTitle">
+            <h1>Bottle Cap Collection</h1>
+            <label for="capSearch">
+                <input class="CoinSearch" type="text" id="capSearch" name="capSearch" alt="capSearch" placeholder="Enter Cap Information (Arla Cravendale, Plastic, Soda)">
+            </label>
+        </div>
+        
 
         <div id="InfoContainer">
             <div class="InfoTitle">
@@ -52,22 +55,22 @@
                     <a href="#">Juice</a>
                     <a href="#">Alcohol</a>
                 </div>
-                
+            </div>
+            <div class="InfoTitle">
+                <button>Colour</button>
+                <div class="InfoSection">
+                    <a href="#">Blue</a>
+                    <a href="#">Red</a>
+                    <a href="#">Black</a>
+                    <a href="#">Yellow</a>
+                    <a href="#">Light Green</a>
+                    <a href="#">Orange</a>
+                </div>
             </div>
         </div>
-
-        <div class="CapInfoSection">
-            <h2 class="CapInfoTitle">Colour</h2>
-            <a href="#">Blue</a>
-            <a href="#">Red</a>
-            <a href="#">Black</a>
-            <a href="#">Yellow</a>
-            <a href="#">Light Green</a>
-            <a href="#">Orange</a>
-        </div>
-        <div class="CapInfoSection">
+        <div class="CapInfoSection" id="capCountry">
             <h2 class="CapInfoTitle">Country Origin</h2>
-            <a href="#">England</a>
+            <!-- <a href="#">England</a>
             <a href="#">Scotland</a>
             <a href="#">Canada</a>
             <a href="#">Italy</a>
@@ -78,7 +81,7 @@
             <a href="#">Dubai</a>
             <a href="#">United States</a>
             <a href="#">Switzerland</a>
-            <a href="#">Algeria</a>
+            <a href="#">Algeria</a> -->
         </div>
         <section id="CapSearchDisplay"></section>
         <p id="CapSearchDisplaySeperation" style="display: none;">===========================================================================================================================================</p>
